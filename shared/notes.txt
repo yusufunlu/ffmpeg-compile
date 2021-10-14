@@ -1,0 +1,11 @@
+gcc -fpic -c addNumbers.c subNumbers.c
+
+##gcc -o libmath.so.1.2.3 addNumbers.o subNumbers.o -shared -Wl, -soname,libmath.so
+##gcc -o ./lib/libmath.so.1.2.3 addNumbers.o subNumbers.o -shared -Wl
+gcc -o ./lib/libmath.so addNumbers.o subNumbers.o -shared -Wl
+#gcc -dynamiclib -o libutils.dylib addNumbers.o subNumbers.o
+
+gcc doMath.c -o doMath -lmath -I include -L lib
+
+otool  -L doMath //check dependencies
+readelf -a doMath | grep Shared

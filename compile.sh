@@ -1,0 +1,1 @@
+gcc -I/usr/local/include/ ffmpeg_example.c -L/usr/local/lib/ -lavformat -lavcodec -ferror-limit=3
