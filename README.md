@@ -5,7 +5,7 @@ gcc -save-temps main.c -o main_binary
 ## compiling 
 * generates architecture specific assembly code
 * gcc -S main.c -> **main.s** file
-##assembling 
+## assembling 
 * object file(binary) -> convert the assembly code into pure binary code or machine code (zeros and ones), relocatable file
 * gcc -c main.c -> **main.o** file
 * hexdump main.o or od -c main.o inspect the binary 
